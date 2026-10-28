@@ -14,18 +14,31 @@
 
 ## 第二步：上传代码
 
-**方法 A：用 GitHub Desktop（图形界面，推荐新手）**
+**方法 A：双击 `deploy.bat`（推荐）**
 
-1. 下载 [GitHub Desktop](https://desktop.github.com/)
-2. 打开后登录 GitHub 账号
-3. 点 **File** → **Add Local Repository**，选择这个项目文件夹
-4. 如果提示 "not a git repository"，点 **Create a repository**
-5. 点 **Publish repository**，选择刚才创建的仓库名
-6. 完成！代码已上传
+1. 在项目文件夹里双击 **deploy.bat**
+2. 它会问你仓库地址 —— 把浏览器地址栏里那条整条粘过来就行，
+   比如 `https://github.com/你的用户名/language-learning`
+3. 第一次推送会弹出浏览器让你登录 GitHub，按提示点一下
+   （**不需要在窗口里输密码**，登录由 Git 自己的凭据管理器处理）
+4. 看到「推送成功」就好了
+
+它会按顺序做这些事，哪一步出问题就停下来告诉你怎么办：
+
+- 检查 git 和项目文件夹
+- 建本地仓库、分支切到 `main`（Actions 只认 main）
+- 绑定远端（已经绑了别的地址会先问过你，不会悄悄改掉）
+- **先在本地构建一遍** —— 构建不过就不推，省得等三分钟才看到 CI 失败
+- 提交（文件名看着像密钥的会先提醒你一句）
+- 推送
+
+想先看看它会做什么、但不真推，加一个 `--dry-run`：
+
+```bash
+node tools/deploy.mjs 你的仓库地址 --dry-run
+```
 
 **方法 B：用命令行（熟悉终端的用）**
-
-在项目文件夹打开终端，运行：
 
 ```bash
 git init
@@ -35,6 +48,14 @@ git branch -M main
 git remote add origin https://github.com/你的用户名/你的仓库名.git
 git push -u origin main
 ```
+
+**方法 C：用 GitHub Desktop（图形界面）**
+
+1. 下载 [GitHub Desktop](https://desktop.github.com/)
+2. 打开后登录 GitHub 账号
+3. 点 **File** → **Add Local Repository**，选择这个项目文件夹
+4. 如果提示 "not a git repository"，点 **Create a repository**
+5. 点 **Publish repository**，选择刚才创建的仓库名
 
 ## 第三步：开启 GitHub Pages
 
@@ -52,6 +73,8 @@ https://你的用户名.github.io/你的仓库名/
 打开就能用了！
 
 ## 以后更新怎么办
+
+**用脚本（最省事）：** 改完代码双击 `deploy.bat`，填不填地址都行（记住上次的了）。
 
 **用 GitHub Desktop：**
 1. 修改代码后，打开 GitHub Desktop
