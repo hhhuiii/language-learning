@@ -1,0 +1,176 @@
+import type { Work } from '../types';
+
+/**
+ * Original teaching sentences written for this site.
+ * Scene: airport, hotel, directions, ordering — the sentences learners
+ * actually need to parse in real time while travelling.
+ */
+export const enTravel: Work = {
+  id: 'en-travel',
+  lang: 'en',
+  title: '一个人出门',
+  titleOrigin: 'Travelling Alone',
+  summary: '机场、旅馆、问路、点单。真实语速下的功能性英语，信息密度高。',
+  scenes: ['travel', 'dining', 'daily'],
+  levels: ['A2', 'B1', 'B2'],
+  source: '本站原创教学例句',
+  license: '可自由用于学习与教学',
+  segments: [
+    {
+      id: 'et-01',
+      text: "Are you checking any bags today, or is that just a carry-on?",
+      zh: '今天有要托运的行李吗，还是只有手提行李？',
+      level: 'B1',
+      scene: 'travel',
+      speaker: '地勤',
+      note: 'check 在机场指「托运」。carry-on = 随身手提行李。整句常被念得很快，重音落在 bags 和 carry-on。',
+      keywords: [
+        { term: 'check a bag', match: 'checking any bags', zh: '托运行李', level: 'B1', note: '机场固定说法，check 不是「检查」。' },
+        { term: 'carry-on', zh: '随身行李', level: 'A2' },
+      ],
+    },
+    {
+      id: 'et-02',
+      text: "Just the carry-on. Do I need to take the laptop out at security?",
+      zh: '只有手提的。过安检的时候需要把笔记本拿出来吗？',
+      level: 'A2',
+      scene: 'travel',
+      speaker: '旅客',
+      note: 'take out 可分离：take the laptop out / take out the laptop。at security 指「在安检处」。',
+      keywords: [
+        { term: 'take out', match: 'take the laptop out', zh: '拿出来', level: 'A2', note: '可分离短语动词。' },
+        { term: 'security', zh: '安检（处）', level: 'A2' },
+      ],
+    },
+    {
+      id: 'et-03',
+      text: "You do, yeah. Laptops and liquids go in a separate bin.",
+      zh: '需要的。笔记本和液体要放在单独的筐里。',
+      level: 'B1',
+      scene: 'travel',
+      speaker: '地勤',
+      note: '"You do" 用助动词 do 回应上一句的 need，是英语特有的省略回答。bin 在这里是「托盘、筐」。',
+      keywords: [
+        { term: 'You do', zh: '是的，需要（助动词省略回答）', level: 'B1', note: '回应 Do I need to...? 时用 do 代替整个动词短语。' },
+        { term: 'separate', zh: '单独的，分开的', level: 'A2', note: '形容词读 /ˈsɛpərət/，动词读 /ˈsɛpəreɪt/。' },
+      ],
+    },
+    {
+      id: 'et-04',
+      text: "Hi, I have a reservation under Chen. Checking in for two nights.",
+      zh: '你好，我有预订，姓陈。入住两晚。',
+      level: 'A2',
+      scene: 'travel',
+      speaker: '旅客',
+      note: 'under + 姓氏 = 用某人名字登记的。check in 两词分写是动词，checkin/check-in 作名词。',
+      keywords: [
+        { term: 'under', zh: '以……的名字（登记）', level: 'B1', note: 'a reservation under Chen = 以陈的名字预订。' },
+        { term: 'check in', match: 'Checking in', zh: '办理入住', level: 'A2' },
+      ],
+    },
+    {
+      id: 'et-05',
+      text: "Let me pull that up. Would you like a room away from the elevator?",
+      zh: '我来调出来看看。您想要离电梯远一点的房间吗？',
+      level: 'B2',
+      scene: 'travel',
+      speaker: '前台',
+      note: 'pull up 指「在系统里调出（记录）」。away from = 远离。Would you like 是最礼貌的询问形式。',
+      keywords: [
+        { term: 'pull up', match: 'pull that up', zh: '调出（屏幕上的记录）', level: 'B2', note: '也可指车辆靠边停下，看语境。' },
+        { term: 'away from', zh: '远离', level: 'A2' },
+      ],
+    },
+    {
+      id: 'et-06',
+      text: "That would be great, actually. I'm a pretty light sleeper.",
+      zh: '那样其实挺好的。我睡觉比较浅。',
+      level: 'B2',
+      scene: 'travel',
+      speaker: '旅客',
+      note: 'light sleeper = 睡眠浅的人（反义：heavy sleeper）。actually 放句末表示「其实、说起来」。',
+      keywords: [
+        { term: 'light sleeper', zh: '睡眠浅的人', level: 'B2', note: '固定搭配，不能说 shallow sleeper。' },
+        { term: 'pretty', zh: '相当，比较（副词）', level: 'A2', note: '口语里修饰形容词，不是「漂亮」。' },
+      ],
+    },
+    {
+      id: 'et-07',
+      text: "Excuse me, is the museum within walking distance from here?",
+      zh: '打扰一下，博物馆从这儿走得到吗？',
+      level: 'B1',
+      scene: 'travel',
+      speaker: '旅客',
+      note: 'within walking distance = 步行可达范围内，固定说法。from here 常轻读成 "frəm hɪər"。',
+      keywords: [
+        { term: 'within walking distance', zh: '步行可达', level: 'B2', note: '整体记忆，不要逐词翻译。' },
+        { term: 'Excuse me', zh: '打扰一下', level: 'A2' },
+      ],
+    },
+    {
+      id: 'et-08',
+      text: "It's a bit of a hike. You're better off taking the number six bus.",
+      zh: '走起来有点远。你坐 6 路公交更划算。',
+      level: 'B2',
+      scene: 'travel',
+      speaker: '路人',
+      note: 'a bit of a hike = 有点远（口语夸张说法）。be better off + V-ing = 做某事会更好。',
+      keywords: [
+        { term: 'a bit of a hike', zh: '有点远的路', level: 'B2', note: 'hike 本义远足，这里指「走着累」。' },
+        { term: 'be better off', match: "You're better off", zh: '最好还是，更划算', level: 'B2', note: '后接 V-ing。' },
+      ],
+    },
+    {
+      id: 'et-09',
+      text: "Does that bus run on Sundays, or should I just grab a cab?",
+      zh: '那班车周日有运营吗，还是我直接打车好了？',
+      level: 'B1',
+      scene: 'travel',
+      speaker: '旅客',
+      note: 'run 指交通工具「运行、有班次」。grab a cab 是押韵的口语搭配，指打出租车。',
+      keywords: [
+        { term: 'run', zh: '（车辆）运营，有班次', level: 'B1', note: 'The bus runs every ten minutes.' },
+        { term: 'grab a cab', zh: '打出租车', level: 'B1' },
+      ],
+    },
+    {
+      id: 'et-10',
+      text: "It runs, but less often. You might be waiting twenty minutes.",
+      zh: '有运营，不过班次少。你可能要等二十分钟。',
+      level: 'B1',
+      scene: 'travel',
+      speaker: '路人',
+      note: 'less often = 频次更低。"might be waiting" 用进行体表示持续的等待，比 might wait 更口语。',
+      keywords: [
+        { term: 'less often', zh: '不那么频繁', level: 'A2' },
+        { term: 'might be V-ing', match: 'might be waiting', zh: '可能会（持续）做', level: 'B2', note: '进行体强调过程的长度。' },
+      ],
+    },
+    {
+      id: 'et-11',
+      text: "Can I get the soup instead of the salad with that?",
+      zh: '那个套餐我可以把沙拉换成汤吗？',
+      level: 'A2',
+      scene: 'dining',
+      speaker: '旅客',
+      note: '"Can I get" 是美式点单最常用句式。with that = 随餐附带的。',
+      keywords: [
+        { term: 'Can I get', zh: '我可以要（点单）', level: 'A2', note: '比 I want 礼貌，比 May I have 随意。' },
+        { term: 'instead of', zh: '换成，而不是', level: 'A2' },
+      ],
+    },
+    {
+      id: 'et-12',
+      text: "Of course. And did you want that to stay or to go?",
+      zh: '当然可以。那是在店里吃还是带走？',
+      level: 'B1',
+      scene: 'dining',
+      speaker: '店员',
+      note: 'for here or to go / to stay or to go 都是「堂食还是外带」。过去式 did you want 在服务业里是礼貌用法，不指过去。',
+      keywords: [
+        { term: 'to stay or to go', zh: '堂食还是外带', level: 'B1', note: '美式说法，英式多用 eat in or take away。' },
+        { term: 'did you want', zh: '您想要（礼貌现在式）', level: 'B2', note: '服务场景用过去式缓和语气。' },
+      ],
+    },
+  ],
+};

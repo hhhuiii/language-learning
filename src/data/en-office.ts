@@ -1,0 +1,177 @@
+import type { Work } from '../types';
+
+/**
+ * Original teaching sentences written for this site. Not transcribed from
+ * any copyrighted film, show, or podcast.
+ * Scene: a first week at a new job — standups, small talk, asking for help.
+ */
+export const enOffice: Work = {
+  id: 'en-office',
+  lang: 'en',
+  title: '新人的第一周',
+  titleOrigin: 'First Week on the Job',
+  summary: '例会、闲聊、请人帮忙。连读、弱读和缩约在职场英语里最密集。',
+  scenes: ['work', 'friends', 'daily'],
+  levels: ['A2', 'B1', 'B2'],
+  source: '本站原创教学例句',
+  license: '可自由用于学习与教学',
+  segments: [
+    {
+      id: 'eo-01',
+      text: "Hey, you must be the new hire. I'm Dana, I sit right over there.",
+      zh: '嘿，你一定是新来的吧。我叫 Dana，就坐在那边。',
+      level: 'A2',
+      scene: 'work',
+      speaker: 'Dana',
+      note: '"must be" 在这里不是「必须」，而是推测：「你一定是」。"right over there" 的 right 是加强语气，不是「右边」。',
+      keywords: [
+        { term: 'must be', zh: '一定是（推测）', level: 'A2', note: '表示有把握的推断，而非义务。' },
+        { term: 'new hire', zh: '新员工', level: 'B1', note: '职场常用名词，比 new employee 更口语。' },
+      ],
+    },
+    {
+      id: 'eo-02',
+      text: "Nice to meet you. I'm still figuring out where everything is.",
+      zh: '很高兴认识你。我还在摸索东西都放在哪儿。',
+      level: 'B1',
+      scene: 'work',
+      speaker: '新人',
+      note: 'figure out = 弄明白、摸索出来。口语里 figuring 的 g 常几乎不发音，听成 "figurin\'"。',
+      keywords: [
+        { term: 'figure out', match: 'figuring out', zh: '弄清楚，摸索明白', level: 'B1', note: '可分离短语动词：figure it out。' },
+        { term: 'still', zh: '仍然，还在', level: 'A2' },
+      ],
+    },
+    {
+      id: 'eo-03',
+      text: "No worries, it took me a couple of weeks to get the hang of it.",
+      zh: '别担心，我也花了两三周才上手。',
+      level: 'B2',
+      scene: 'work',
+      speaker: 'Dana',
+      note: 'get the hang of it = 掌握诀窍、上手。"a couple of" 在快速口语里常缩成 "a coupla"。',
+      keywords: [
+        { term: 'get the hang of', zh: '掌握诀窍，上手', level: 'B2', note: '固定搭配，后接 of + 事物。' },
+        { term: 'a couple of', zh: '两三个', level: 'A2', note: '口语缩读为 a coupla /ə ˈkʌplə/。' },
+      ],
+    },
+    {
+      id: 'eo-04',
+      text: "Standup's at nine-thirty. It's usually quick, like ten minutes tops.",
+      zh: '例会九点半。一般很快，最多十分钟左右。',
+      level: 'B2',
+      scene: 'work',
+      speaker: 'Dana',
+      note: 'tops 放句末表示「最多」。"Standup\'s" = Standup is，所有格和缩约同形，靠语境区分。',
+      keywords: [
+        { term: 'tops', zh: '最多（置于句末）', level: 'B2', note: '非正式用法：ten minutes tops。' },
+        { term: 'standup', match: "Standup's", zh: '站会，每日例会', level: 'B1' },
+      ],
+    },
+    {
+      id: 'eo-05',
+      text: "Could you walk me through the deploy process when you get a chance?",
+      zh: '你有空的时候能带我过一遍部署流程吗？',
+      level: 'B2',
+      scene: 'work',
+      speaker: '新人',
+      note: 'walk someone through = 一步步带着讲解。"when you get a chance" 是让请求显得不急迫的缓冲语。',
+      keywords: [
+        { term: 'walk me through', zh: '带我逐步过一遍', level: 'B2', note: '比 explain 更强调一步步演示。' },
+        { term: 'when you get a chance', zh: '你有空的时候', level: 'B1', note: '礼貌缓冲，降低请求的压迫感。' },
+      ],
+    },
+    {
+      id: 'eo-06',
+      text: "Sure thing. I'll ping you after lunch and we can screen-share.",
+      zh: '当然可以。午饭后我发消息给你，我们可以共享屏幕。',
+      level: 'B1',
+      scene: 'work',
+      speaker: 'Dana',
+      note: 'ping 在职场口语里指「发个消息」。"Sure thing" = 没问题，比 yes 随意。',
+      keywords: [
+        { term: 'Sure thing', zh: '当然，没问题', level: 'A2' },
+        { term: 'ping', zh: '发消息联系', level: 'B1', note: '源自网络术语，现指轻量的联络。' },
+      ],
+    },
+    {
+      id: 'eo-07',
+      text: "I don't want to step on anyone's toes, so who owns this file?",
+      zh: '我不想越界冒犯谁，所以这个文件是谁负责的？',
+      level: 'B2',
+      scene: 'work',
+      speaker: '新人',
+      note: 'step on someone\'s toes = 侵犯别人的职责范围。own 在职场指「负责、主管」，不是「拥有」。',
+      keywords: [
+        { term: "step on someone's toes", match: "step on anyone's toes", zh: '越界，侵犯他人职责', level: 'B2', note: '习语，字面是「踩到脚趾」。' },
+        { term: 'own', zh: '负责，主管', level: 'B2', note: '职场用法：who owns this = 谁负责这件事。' },
+      ],
+    },
+    {
+      id: 'eo-08',
+      text: "That'd be Marco, but he's out till Thursday.",
+      zh: '那是 Marco 负责，不过他要到周四才回来。',
+      level: 'B1',
+      scene: 'work',
+      speaker: 'Dana',
+      note: '"That\'d" = That would，极易听漏。"out" 指不在岗（休假或出差），till = until 的口语形。',
+      keywords: [
+        { term: "that'd", match: "That'd", zh: 'that would 的缩约', level: 'B1', note: '/ðætəd/，语速快时只剩一个轻音节。' },
+        { term: 'be out', match: "he's out", zh: '不在岗，休假中', level: 'B1' },
+      ],
+    },
+    {
+      id: 'eo-09',
+      text: "Got it. I'll leave him a comment instead of changing it myself.",
+      zh: '明白了。我留个评论给他，不自己改。',
+      level: 'B1',
+      scene: 'work',
+      speaker: '新人',
+      note: '"Got it" 是最常用的「明白了」。instead of + 动名词，表示「而不是做某事」。',
+      keywords: [
+        { term: 'Got it', zh: '明白了', level: 'A2' },
+        { term: 'instead of', zh: '而不是，代替', level: 'A2', note: '后接名词或 V-ing。' },
+      ],
+    },
+    {
+      id: 'eo-10',
+      text: "Smart. Honestly, that's more than most people do in week one.",
+      zh: '聪明。说实话，这比大多数人第一周做的都多。',
+      level: 'B2',
+      scene: 'work',
+      speaker: 'Dana',
+      note: 'Honestly 句首是插入语，表示「说真的」。"more than most people do" 用 do 代替重复的动词。',
+      keywords: [
+        { term: 'Honestly', zh: '说实话（插入语）', level: 'B1' },
+        { term: 'more than ... do', match: 'more than most people do', zh: '比……做得多', level: 'B2', note: 'do 作代动词，避免重复前面的动词。' },
+      ],
+    },
+    {
+      id: 'eo-11',
+      text: "By the way, we're grabbing coffee at three. You should come.",
+      zh: '顺便说一下，我们三点去喝咖啡。你也来吧。',
+      level: 'B1',
+      scene: 'friends',
+      speaker: 'Dana',
+      note: 'grab 在口语里替代 get/have，显得随意。"You should come" 是邀请，不是命令。',
+      keywords: [
+        { term: 'grab coffee', match: 'grabbing coffee', zh: '去喝杯咖啡', level: 'B1', note: 'grab 表示随意地去拿／去做。' },
+        { term: 'By the way', zh: '顺便一提', level: 'A2' },
+      ],
+    },
+    {
+      id: 'eo-12',
+      text: "I'd love to, as long as I'm done with onboarding paperwork by then.",
+      zh: '我很想去，只要那时候入职材料已经弄完了。',
+      level: 'B2',
+      scene: 'friends',
+      speaker: '新人',
+      note: '"I\'d love to" 是热情但礼貌的接受。as long as = 只要（条件）。by then = 到那时之前。',
+      keywords: [
+        { term: "I'd love to", zh: '我很愿意', level: 'B1', note: '接受邀请的常用说法，后面可省略动词。' },
+        { term: 'as long as', zh: '只要', level: 'B2', note: '引导条件句。' },
+        { term: 'onboarding', zh: '入职流程', level: 'B2' },
+      ],
+    },
+  ],
+};

@@ -1,0 +1,177 @@
+import type { Work } from '../types';
+
+/**
+ * Original teaching sentences written for this site.
+ * Scene: unplanned talk between friends — the register where
+ * reductions, filler words and trailing-off sentences live.
+ */
+export const enChat: Work = {
+  id: 'en-chat',
+  lang: 'en',
+  title: '没什么正事的闲聊',
+  titleOrigin: 'Just Catching Up',
+  summary: '朋友之间没主题的对话。缩读最狠、话说一半、填充词最多，最难听清的其实是这种。',
+  scenes: ['friends', 'daily', 'dining'],
+  levels: ['A2', 'B1', 'B2'],
+  source: '本站原创教学例句',
+  license: '可自由用于学习与教学',
+  segments: [
+    {
+      id: 'ec-01',
+      text: "Hey, long time. How've you been?",
+      zh: '嘿，好久不见。你最近怎么样？',
+      level: 'A2',
+      scene: 'friends',
+      speaker: 'A',
+      note: 'long time 是 long time no see 的省略。How\'ve you been 的 have 弱读到几乎只剩一个 /v/，听起来像 "How-v you been"。',
+      keywords: [
+        { term: 'long time', zh: '好久不见', level: 'A2', note: 'long time no see 的口语省略。' },
+        { term: "How've you been", zh: '你最近怎么样', level: 'A2', note: 'have 弱读，只剩 /v/ 的音。' },
+      ],
+    },
+    {
+      id: 'ec-02',
+      text: "Not bad, kind of busy. You know how it is.",
+      zh: '还行，有点忙。你知道的那种。',
+      level: 'B1',
+      scene: 'friends',
+      speaker: 'B',
+      note: 'kind of 口语缩成 "kinda"，表示程度打折。You know how it is 是不想细说时的收尾套话。',
+      keywords: [
+        { term: 'kind of', zh: '有点，算是', level: 'B1', note: '口语缩读成 kinda /ˈkaɪndə/。' },
+        { term: 'You know how it is', zh: '你知道那种情况', level: 'B1', note: '不想展开时的收尾，不是真在问。' },
+      ],
+    },
+    {
+      id: 'ec-03',
+      text: "Yeah, tell me about it. Did you ever end up moving?",
+      zh: '可不是嘛。你后来到底搬了没？',
+      level: 'B2',
+      scene: 'friends',
+      speaker: 'A',
+      note: 'Tell me about it 是反话 —— 不是让你讲，而是「我太有同感了」。end up ＋ V-ing ＝ 最后变成、到底还是。',
+      keywords: [
+        { term: 'Tell me about it', match: 'tell me about it', zh: '可不是嘛（深有同感）', level: 'B2', note: '反话，不是真的要你讲。' },
+        { term: 'end up V-ing', match: 'end up moving', zh: '最后还是……了', level: 'B2', note: '表示几经曲折后的结果。' },
+      ],
+    },
+    {
+      id: 'ec-04',
+      text: "I did, actually. Took forever to find a place though.",
+      zh: '搬了，其实。不过找房子花了好久。',
+      level: 'B1',
+      scene: 'friends',
+      speaker: 'B',
+      note: 'I did 用助动词代替整个动词短语。句首省略了主语 It —— Took forever 完整是 It took forever。though 放句尾表「不过」。',
+      keywords: [
+        { term: 'take forever', match: 'Took forever', zh: '花了超久', level: 'B1', note: '夸张说法，不是真的「永远」。' },
+        { term: 'though', zh: '不过（句尾）', level: 'B1', note: '放句尾表转折，口语比 however 常见得多。' },
+      ],
+    },
+    {
+      id: 'ec-05',
+      text: "I bet. Rent around here is insane these days.",
+      zh: '肯定的。这附近现在的房租贵得离谱。',
+      level: 'B1',
+      scene: 'friends',
+      speaker: 'A',
+      note: 'I bet 是「我信」「肯定是」，不是在打赌。insane 口语里就是「离谱」，不带精神疾病的意思。',
+      keywords: [
+        { term: 'I bet', zh: '肯定是，我信', level: 'B1', note: '表示完全理解，不是打赌。' },
+        { term: 'insane', zh: '离谱，夸张', level: 'B1', note: '口语里就是「太过分了」。' },
+      ],
+    },
+    {
+      id: 'ec-06',
+      text: "Right? I almost gave up and stayed put.",
+      zh: '是吧？我差点就放弃、不搬了。',
+      level: 'B2',
+      scene: 'friends',
+      speaker: 'B',
+      note: 'Right? 是寻求同意的反问。stay put 是固定搭配 ＝ 留在原地不动，put 在这里不是动词原义。',
+      keywords: [
+        { term: 'Right?', match: 'Right', zh: '是吧？', level: 'A2', note: '寻求对方认同的反问。' },
+        { term: 'stay put', match: 'stayed put', zh: '待在原地不动', level: 'B2', note: '固定搭配，put 不作「放」解。' },
+      ],
+    },
+    {
+      id: 'ec-07',
+      text: "Anyway, are you free Saturday? A few of us are grabbing dinner.",
+      zh: '话说，你周六有空吗？我们几个人要一起吃晚饭。',
+      level: 'B1',
+      scene: 'dining',
+      speaker: 'A',
+      note: 'Anyway 在这里是换话题的信号 —— 闲聊转入正事的标志。a few of us 比 some of us 更具体地指「我们当中几个」。',
+      keywords: [
+        { term: 'Anyway', zh: '话说，总之（转话题）', level: 'B1', note: '话轮标记，提示要换题了。' },
+        { term: 'a few of us', zh: '我们当中几个人', level: 'B1' },
+      ],
+    },
+    {
+      id: 'ec-08',
+      text: "Saturday works. What time were you thinking?",
+      zh: '周六可以。你想约几点？',
+      level: 'B1',
+      scene: 'dining',
+      speaker: 'B',
+      note: 'Saturday works 省略了 for me。were you thinking 用过去进行时表示委婉的询问，不是在问过去的事。',
+      keywords: [
+        { term: 'work', match: 'works', zh: '（时间）可行', level: 'B1', note: '主语是时间时，work ＝ 行得通。' },
+        { term: 'were you thinking', zh: '你是想……（委婉）', level: 'B2', note: '过去进行时表客气，不指过去。' },
+      ],
+    },
+    {
+      id: 'ec-09',
+      text: "Sevenish? We're not being picky about it.",
+      zh: '七点左右吧？我们没那么讲究。',
+      level: 'B2',
+      scene: 'dining',
+      speaker: 'A',
+      note: '-ish 加在时间后面表示「大约」，sevenish ＝ 七点上下。be being ＋ 形容词表示「此刻的表现」，不是一贯性格。',
+      keywords: [
+        { term: '-ish', match: 'ish', zh: '大约，左右', level: 'B2', note: '加在数字或形容词后表模糊。' },
+        { term: 'picky', zh: '挑剔，讲究', level: 'B1' },
+      ],
+    },
+    {
+      id: 'ec-10',
+      text: "Works for me. Should I bring anything, or is it all sorted?",
+      zh: '那就这样。我需要带什么吗，还是都安排好了？',
+      level: 'B2',
+      scene: 'dining',
+      speaker: 'B',
+      note: 'Works for me 是爽快答应。sorted 在英式口语里是「搞定了」，美式更常说 all set。',
+      keywords: [
+        { term: 'Works for me', match: 'Works for me', zh: '我没问题', level: 'B1', note: '省略主语的答应方式。' },
+        { term: 'sorted', zh: '搞定了，安排好了', level: 'B2', note: '英式口语，美式常说 all set。' },
+      ],
+    },
+    {
+      id: 'ec-11',
+      text: "Nah, we've got it covered. Just show up.",
+      zh: '不用，我们都搞定了。你人到就行。',
+      level: 'B1',
+      scene: 'friends',
+      speaker: 'A',
+      note: 'Nah 是 no 的随意说法。have got it covered ＝ 都安排妥了。show up 是「露面、到场」，强调人到就够。',
+      keywords: [
+        { term: 'Nah', zh: '不用，不（随意）', level: 'A2', note: 'no 的口语变体，只对熟人用。' },
+        { term: 'have got it covered', match: "we've got it covered", zh: '都安排好了', level: 'B2', note: 'cover 在这里是「包下来」。' },
+        { term: 'show up', zh: '到场，露面', level: 'B1' },
+      ],
+    },
+    {
+      id: 'ec-12',
+      text: "Sounds good. I'll text you if anything comes up.",
+      zh: '那行。要是有什么事我发消息给你。',
+      level: 'A2',
+      scene: 'friends',
+      speaker: 'B',
+      note: 'come up 是「临时出现（事情）」，和 en-phone 里 something came up 同一个用法。text 直接作动词。',
+      keywords: [
+        { term: 'text', zh: '发短信／消息', level: 'A2', note: '名词直接作动词。' },
+        { term: 'come up', match: 'comes up', zh: '（事情）临时出现', level: 'B1', note: '常用于临时有事。' },
+      ],
+    },
+  ],
+};
