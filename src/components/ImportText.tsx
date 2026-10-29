@@ -8,7 +8,7 @@
  * 导入结果存 localStorage，刷新还在。
  */
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { buildFromText, splitParagraphs, splitSentences } from '../store/imported';
 import { LEVELS, LEVEL_LABEL } from '../data';
 import type { Article, Lang, Level } from '../types';
@@ -25,6 +25,18 @@ export default function ImportText({
   const [text, setText] = useState('');
   const [level, setLevel] = useState<Level>(lang === 'ja' ? 'N3' : 'B1');
   const [err, setErr] = useState<string | null>(null);
+
+  /*
+   * 切换语言时把难度拨回这门语言的默认档。
+   *
+   * useState 的初始值只在挂载时算一次：在英语下开过表单（level = 'B1'），
+   * 再切到日语，level 还是 'B1' —— 而日语的档位是 N5…N1，
+   * 于是一个都不高亮，看起来像"没有默认难度"。
+   * 真导进去的话 level 也会是对不上的那个。
+   */
+  useEffect(() => {
+    setLevel(lang === 'ja' ? 'N3' : 'B1');
+  }, [lang]);
 
   /** 实时预览：让人在导入前就看到会被切成几段几句 */
   const preview = useMemo(() => {

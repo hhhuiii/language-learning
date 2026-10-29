@@ -804,7 +804,16 @@ mark.kw {
   border: 1px solid var(--rule);
   border-radius: var(--r-lg);
   padding: 0;
-  overflow: hidden;
+  /*
+   * 这里不能用 overflow: hidden。
+   *
+   * 它会把 .reader 变成播放条 sticky 的「滚动容器」，于是播放条的
+   * top: 64px 不再是「离视口顶部 64px」，而是「离这张卡片顶部 64px」
+   * —— 播放条被推进卡片里 64px，正好压住正文第一句（实测遮掉 30px）。
+   *
+   * 圆角改由首尾子元素自己兜：播放条圆上面两个角，底部提示条圆下面两个角。
+   */
+  isolation: isolate;
 }
 
 /* 播放条常驻顶部，滚动稿子时也能随手暂停 */
@@ -820,7 +829,16 @@ mark.kw {
   background: color-mix(in srgb, var(--paper-2) 92%, transparent);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--rule);
+  /* 卡片不再裁剪，圆角自己带 */
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
 }
+/* 卡片最后一条：圆下面两个角，补上 overflow 不再裁剪的那部分 */
+.reader .stage__foot {
+  margin-top: 0;
+  padding: 18px;
+  border-radius: 0 0 var(--r-lg) var(--r-lg);
+}
+
 .reader__clock {
   font-family: var(--mono);
   font-size: 12px;
